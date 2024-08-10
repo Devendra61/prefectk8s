@@ -31,7 +31,7 @@ jobs:
         context: .
         push: true
         file: ./docker/Dockerfile
-        tags: ${{ github.event.repository.name }}/${{ secrets.DOCKER_HUB_ID }}:latest
+        tags: ${{ secrets.DOCKER_HUB_ID }}/prefectk8s:latest
 
     - name: Log out of Docker Hub
       run: docker logout
